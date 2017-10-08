@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/面向对象/" class="article-date">
+  <time datetime="2017-10-08T02:19:01.000Z" itemprop="datePublished">2017-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/bash学习/">bash学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/面向对象/">bash</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><ol>
+<li><p>PC端的操作系统</p>
+</li>
+<li><p>移动端操作系统</p>
+</li>
+</ol>
+<h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><p>shell其实就是操作系统提供给用来和操作系统交互的内容 !!</p>
+<ol>
+<li><p>图形化的shell<br>Windows的图形化界面 , Android图形化界面 , window-x , kde</p>
+</li>
+<li><p>命令行的shell<br>cmd (Windows系统下的)  bash (Linux系统下的)</p>
+<p>为什么学习bash ?<br>因为bash 可以提供Linux命令的运行环境 , git需要在Linux环境下去运行 , 所以 先学习bash , git 才能更好的使用</p>
+<p>bash 就是为 git提供了运行环境  是 所有Linux自带的shell</p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2></li>
+<li>只能在 Linux 系统下使用</li>
+</ol>
+<h1 id="bash基本命令介绍"><a href="#bash基本命令介绍" class="headerlink" title="bash基本命令介绍"></a>bash基本命令介绍</h1><h2 id="bash命令的基本语法"><a href="#bash命令的基本语法" class="headerlink" title="bash命令的基本语法"></a>bash命令的基本语法</h2><p>命令名称 [-选项] [参数]    (方括号包起来的都是 可选的)</p>
+<p>##　cd<br>全称: change director<br>功能: 改变当前所在的目录</p>
+<p>cd 文件夹的路径</p>
+<p>~: 指的其实是当前用户的用户根目录<br>等价于:/c/Users/Ryan/Desktop/</p>
+<p>..: 指上一级目录</p>
+<h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>全称: Print Work Directory<br>功能: 打印当前所在的目录</p>
+<h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h2><p>全称: list<br>功能: 展示当前路径下的所有文件</p>
+<p>有参数的情况<br>功能: 不切换文件夹 , 就直接展示指定的文件夹下的所有的文件信息</p>
+<p>用法: ls 文件夹路径</p>
+<p>有选项的情况<br> -a选项的意思是: all 也就是将所有内容全部展示出来 , 包括隐藏文件<br> -l选项的意思是: list 将所有的内容的详细信息以表格的形式显示出来</p>
+<p> 用法: ls -a<br>       ls -l</p>
+<h2 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h2><p>功能: 创建文件<br>用法:  在当前目录下创建文件   touch 文件名<br>       在指定目录下创建文件   touch 路径/文件名</p>
+<h2 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h2><p>功能: 创建文件夹<br>用法: touch 文件夹<br>      touch 路径/文件夹</p>
+<h2 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h2><p>remove<br>功能: 删除文件<br>注意: 这个删除不会进回收站<br>用法: rm 文件名<br>      rm 目录/文件名</p>
+<p>rm命令也可以用来删除文件夹 , 但是需要加上 -r<br>即:  rm -r 文件夹名称<br>强制删除:<br>     rm -f </p>
+<h2 id="rmdir-几乎用不到"><a href="#rmdir-几乎用不到" class="headerlink" title="rmdir (几乎用不到)"></a>rmdir (几乎用不到)</h2><p>功能: 删除非空文件夹</p>
+<h2 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h2><p>copy<br>功能: 复制文件 或者文件夹</p>
+<p>cp 要复制的文件 复制到哪里去</p>
+<p>复制文件夹: cp -r 要复制的文件夹  复制到哪里去</p>
+<h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p>move<br>移动文件 文件夹<br>用法: mv 要移动的文件  要移动到哪里去<br>‘常被用作重命名操作’</p>
+<h2 id="清空屏幕"><a href="#清空屏幕" class="headerlink" title="清空屏幕"></a>清空屏幕</h2><p>clear<br>reset</p>
+<h2 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h2><p>cat 文件名<br>cat 路径/文件名</p>
+<p>less  可以将文件内容分页展示<br>下一页: 空格 回车 或者 鼠标滚轮 或者 方向键</p>
+<p>退出内容展示: 按q键</p>
+<h2 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h2><p>将指定内容输出到屏幕上</p>
+<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>‘&gt;’: 覆盖操作<br>‘&gt;&gt;’: 追加</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/08/面向对象/" data-id="cj8i4lcdq0000z0x0vlqcnnmi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/hello-world/" class="article-date">
+  <time datetime="2017-10-07T17:50:21.712Z" itemprop="datePublished">2017-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cj8i4lce10001z0x0sijc36i4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/面向对象/">bash</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
