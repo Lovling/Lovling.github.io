@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>插件使用（待更） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Echarts 引入文件 设置一个具备宽高的容器，用来盛放图表 直接调用初始化的方法（通过echarts.init方法 ），初始化一个实例（给个id或者类名，想要几个就初始化几个） 设置数据的选项,传递的是对象 用setOption(option)方法使用指定的配置项和数据显示图表12345678910111213141516171819202122232425262728293031323334">
+<meta name="keywords" content="插件使用（待更）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="插件使用（待更）">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/插件使用（待更）/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Echarts 引入文件 设置一个具备宽高的容器，用来盛放图表 直接调用初始化的方法（通过echarts.init方法 ），初始化一个实例（给个id或者类名，想要几个就初始化几个） 设置数据的选项,传递的是对象 用setOption(option)方法使用指定的配置项和数据显示图表12345678910111213141516171819202122232425262728293031323334">
+<meta property="og:updated_time" content="2018-04-07T09:09:08.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="插件使用（待更）">
+<meta name="twitter:description" content="Echarts 引入文件 设置一个具备宽高的容器，用来盛放图表 直接调用初始化的方法（通过echarts.init方法 ），初始化一个实例（给个id或者类名，想要几个就初始化几个） 设置数据的选项,传递的是对象 用setOption(option)方法使用指定的配置项和数据显示图表12345678910111213141516171819202122232425262728293031323334">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-插件使用（待更）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/插件使用（待更）/" class="article-date">
+  <time datetime="2016-04-07T09:08:13.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/插件使用/">插件使用</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      插件使用（待更）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Echarts"><a href="#Echarts" class="headerlink" title="Echarts"></a>Echarts</h1><ul>
+<li>引入文件</li>
+<li>设置一个具备宽高的容器，用来盛放图表</li>
+<li>直接调用初始化的方法（通过echarts.init方法 ），初始化一个实例（给个id或者类名，想要几个就初始化几个）</li>
+<li>设置数据的选项,传递的是对象</li>
+<li>用setOption(option)方法使用指定的配置项和数据显示图表<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 示例： --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 2-为 ECharts 准备一个具备大小（宽高）的 DOM --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myBox"</span> <span class="attr">style</span>=<span class="string">"width: 800px;height:500px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--1-引入js插件--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"echarts.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="comment">// 1-基于准备好的dom，初始化echarts实例</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">'myBox'</span>));</span></div><div class="line"><span class="javascript">        <span class="comment">//2-设置数据的选项</span></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span>  option=&#123;</span></div><div class="line"><span class="javascript">            <span class="comment">//标题</span></span></div><div class="line"><span class="undefined">            title:&#123;</span></div><div class="line"><span class="javascript">                text:<span class="string">'体重'</span></span></div><div class="line"><span class="undefined">            &#125;,</span></div><div class="line"><span class="javascript">            <span class="comment">//图例</span></span></div><div class="line"><span class="undefined">            legend:&#123;</span></div><div class="line"><span class="javascript">                data:[<span class="string">'体重'</span>]</span></div><div class="line"><span class="undefined">            &#125;,</span></div><div class="line"><span class="javascript">            <span class="comment">//x轴</span></span></div><div class="line"><span class="undefined">            xAxis:&#123;</span></div><div class="line"><span class="javascript">                data:[<span class="string">'中国人'</span>,<span class="string">'美国人'</span>,<span class="string">'日本人'</span>,<span class="string">'德国人'</span>,<span class="string">'英国人'</span>,<span class="string">'韩国人'</span>]</span></div><div class="line"><span class="undefined">            &#125;,</span></div><div class="line"><span class="undefined">            yAxis:&#123;</span></div><div class="line"><span class="javascript">                <span class="comment">//y轴的数据可以不用设置，会根据数值自动生成</span></span></div><div class="line"><span class="undefined">            &#125;,</span></div><div class="line"><span class="undefined">            series:[</span></div><div class="line"><span class="undefined">                &#123;</span></div><div class="line"><span class="javascript">                    name:<span class="string">'体重'</span>,</span></div><div class="line"><span class="javascript">                    type:<span class="string">'line'</span>,<span class="comment">//图标类型  bar 柱状图 line 折线图 pie 饼图</span></span></div><div class="line"><span class="undefined">                    data:[100,89,120,70,90,150],</span></div><div class="line"><span class="undefined">                &#125;,</span></div><div class="line"><span class="undefined">            ]</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="javascript">        <span class="comment">//3- 使用刚指定的配置项和数据显示图表。</span></span></div><div class="line"><span class="undefined">        myChart.setOption(option);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="iScroll插件的使用"><a href="#iScroll插件的使用" class="headerlink" title="iScroll插件的使用"></a>iScroll插件的使用</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. 引入文件</span></div><div class="line"></div><div class="line"><span class="comment">//2. 在需要使用插件的代码的父盒子上 加上id=“wrapper” </span></div><div class="line"><span class="comment">//注意： 只有id="wrapper" 下面的第一个子元素才滚动</span></div><div class="line"></div><div class="line"><span class="comment">//3. 实例化iscroll</span></div><div class="line"><span class="comment">//适用于滚动内容只包含文字图片</span></div><div class="line">&lt;script&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">    ...</div><div class="line">    &lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"iscroll.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">    &lt;script type=<span class="string">"text/javascript"</span>&gt;</div><div class="line">    <span class="keyword">var</span> myScroll;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">loaded</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        myScroll = <span class="keyword">new</span> IScroll(<span class="string">'#wrapper'</span>,&#123;</div><div class="line">                 mouseWheel: <span class="literal">true</span>, <span class="comment">//鼠标滚轮</span></div><div class="line">                 scrollbars: <span class="literal">true</span>  <span class="comment">//滚动条</span></div><div class="line">                 scrollX:<span class="literal">true</span>,     <span class="comment">//横向滚动</span></div><div class="line">                 scrollY:<span class="literal">true</span>,     <span class="comment">//垂直滚动</span></div><div class="line">       &#125;);</div><div class="line">    &#125;</div><div class="line">    &lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>head&gt;</div><div class="line">    ...</div><div class="line">    &lt;body onload=<span class="string">"loaded()"</span>&gt;</div><div class="line">    &lt;div id=<span class="string">"wrapper"</span>&gt;</div><div class="line">    <span class="comment">//ul滚动</span></div><div class="line">        &lt;ul&gt;  </div><div class="line">            &lt;li&gt;...&lt;<span class="regexp">/li&gt;</span></div><div class="line"><span class="regexp">            &lt;li&gt;...&lt;/</span>li&gt;</div><div class="line">            ...</div><div class="line">        &lt;<span class="regexp">/ul&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">    &lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div></pre></td></tr></table></figure>
+<h1 id="lazyload-懒加载"><a href="#lazyload-懒加载" class="headerlink" title="lazyload(懒加载)"></a>lazyload(懒加载)</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//html代码</span></div><div class="line">&lt;img <span class="class"><span class="keyword">class</span></span>=<span class="string">"lazy"</span> alt=<span class="string">""</span> width=<span class="string">"640"</span> height=<span class="string">"480"</span> data-original=<span class="string">"img/example.jpg"</span> /&gt;</div><div class="line"><span class="comment">// js代码</span></div><div class="line"></div><div class="line">这将使所有 <span class="class"><span class="keyword">class</span> 为 <span class="title">lazy</span> 的图片将被延迟加载：</span></div><div class="line"><span class="class">$(<span class="title">function</span>() </span>&#123;</div><div class="line">    $(<span class="string">"img.lazy"</span>).lazyload();</div><div class="line">&#125;);</div><div class="line"></div><div class="line">设置临界点：</div><div class="line">$(<span class="string">"img.lazy"</span>).lazyload(&#123;</div><div class="line">    threshold : <span class="number">200</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">设置事件来触发加载：</div><div class="line">$(<span class="string">"img.lazy"</span>).lazyload(&#123;</div><div class="line">    event : <span class="string">"click"</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">使用特效：</div><div class="line">$(<span class="string">"img.lazy"</span>).lazyload(&#123;</div><div class="line">    effect : <span class="string">"fadeIn"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/插件使用（待更）/" data-id="cjfp5qsc0000wpcx0uvovcj6j" class="article-share-link">Partager</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/插件使用（待更）/">插件使用（待更）</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/10/08/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/07/兼容性问题（待更）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">兼容性问题（待更）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Catégories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">-笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/兼容性问题/">兼容性问题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/插件使用/">插件使用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/遇到的问题/">遇到的问题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Mot-clés</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM学习/">BOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM学习/">DOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5C3学习/">H5C3学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JQuery学习/">JQuery学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS基础学习/">JS基础学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS高级学习/">JS高级学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Question学习/">Question学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client、offset、scroll学习/">client、offset、scroll学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/兼容性问题（待更）/">兼容性问题（待更）</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/插件使用（待更）/">插件使用（待更）</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 20px;">-学习</a> <a href="/tags/BOM学习/" style="font-size: 10px;">BOM学习</a> <a href="/tags/DOM学习/" style="font-size: 10px;">DOM学习</a> <a href="/tags/H5C3学习/" style="font-size: 10px;">H5C3学习</a> <a href="/tags/JQuery学习/" style="font-size: 10px;">JQuery学习</a> <a href="/tags/JS基础学习/" style="font-size: 10px;">JS基础学习</a> <a href="/tags/JS高级学习/" style="font-size: 10px;">JS高级学习</a> <a href="/tags/Question学习/" style="font-size: 10px;">Question学习</a> <a href="/tags/client、offset、scroll学习/" style="font-size: 10px;">client、offset、scroll学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/兼容性问题（待更）/" style="font-size: 10px;">兼容性问题（待更）</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/插件使用（待更）/" style="font-size: 10px;">插件使用（待更）</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/面向对象/">bash</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/插件使用（待更）/">插件使用（待更）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/兼容性问题（待更）/">兼容性问题（待更）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/Question笔记/">Question笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
