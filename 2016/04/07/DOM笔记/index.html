@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>DOM笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="DOM(文档对象模型)定义: 是一套操作html和xml文档的API  使用DOM操作的标签以及其他内容均为对象的形式  获取元素的方式根据id1document.getElementById 注意:  使用document.getElementById获取元素失败时,结果为null 获取位置,如果在head中书写js代码获取元素, 需要考虑标签是否生成,如果写在入口函数里就不用考虑 通常情况下我">
+<meta name="keywords" content="DOM学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM笔记">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/DOM笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="DOM(文档对象模型)定义: 是一套操作html和xml文档的API  使用DOM操作的标签以及其他内容均为对象的形式  获取元素的方式根据id1document.getElementById 注意:  使用document.getElementById获取元素失败时,结果为null 获取位置,如果在head中书写js代码获取元素, 需要考虑标签是否生成,如果写在入口函数里就不用考虑 通常情况下我">
+<meta property="og:image" content="http://yoursite.com/2016/04/07/DOM笔记/images/param.png">
+<meta property="og:updated_time" content="2018-04-07T08:40:22.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOM笔记">
+<meta name="twitter:description" content="DOM(文档对象模型)定义: 是一套操作html和xml文档的API  使用DOM操作的标签以及其他内容均为对象的形式  获取元素的方式根据id1document.getElementById 注意:  使用document.getElementById获取元素失败时,结果为null 获取位置,如果在head中书写js代码获取元素, 需要考虑标签是否生成,如果写在入口函数里就不用考虑 通常情况下我">
+<meta name="twitter:image" content="http://yoursite.com/2016/04/07/DOM笔记/images/param.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-DOM笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/DOM笔记/" class="article-date">
+  <time datetime="2016-04-07T08:38:25.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DOM笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM(文档对象模型)"></a>DOM(文档对象模型)</h1><p>定义: 是一套操作html和xml文档的API</p>
+<ul>
+<li>使用DOM操作的标签以及其他内容均为对象的形式</li>
+</ul>
+<h2 id="获取元素的方式"><a href="#获取元素的方式" class="headerlink" title="获取元素的方式"></a>获取元素的方式</h2><h3 id="根据id"><a href="#根据id" class="headerlink" title="根据id"></a>根据id</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>:</p>
+<ul>
+<li>使用document.getElementById获取元素失败时,结果为null</li>
+<li>获取位置,如果在head中书写js代码获取元素, 需要考虑标签是否生成,如果写在入口函数里就不用考虑</li>
+<li>通常情况下我们不写入口函数,所以一般js代码都会放在body标签内部的最底部<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//入口函数:</span></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//在这里书写的js代码可以不用考虑其放置的位置</span></div><div class="line">    <span class="comment">//作用: 在入口函数内书写的代码会在页面完全加载(结构,图片,文件)后执行</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="根据标签名"><a href="#根据标签名" class="headerlink" title="根据标签名"></a>根据标签名</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// document.getElementsByTagName("标签名")  //结果是伪数组,所以想要操作内部的标签第一步就是遍历</span></div><div class="line">&lt;div id=<span class="string">"box"</span>&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;div&gt;&lt;/</span>div&gt;</div><div class="line">&lt;div&gt;&lt;/div&gt;</div><div class="line"><span class="comment">//获取box内部的div标签: </span></div><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">"box"</span>)</div><div class="line"><span class="keyword">var</span> divs = box.document.getElementsByTagName(<span class="string">"div"</span>)</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>: 如果想要在某个父标签内获取指定的一些子标签,可以将document.getElementsByTagName前面的标签更换</p>
+<h3 id="根据类名获取"><a href="#根据类名获取" class="headerlink" title="根据类名获取"></a>根据类名获取</h3><p>兼容性: </p>
+<ol>
+<li>IE9以下不支持, IE也没有对应的功能,需要自己写代码实现</li>
+<li>能力检测见兼容性文档<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">标签.getElementsByClassName()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="DOM样式操作"><a href="#DOM样式操作" class="headerlink" title="DOM样式操作"></a>DOM样式操作</h2><p>别忘记先获取元素</p>
+<h3 id="标签样式的设置方式"><a href="#标签样式的设置方式" class="headerlink" title="标签样式的设置方式"></a>标签样式的设置方式</h3><ul>
+<li><p>style<br>设置的样式值为字符串类型, 有单位加单位 , 且设置的样式为行内样式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">box.style.color = <span class="string">"red"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>getComputedStyle()</p>
+</li>
+</ul>
+<ol>
+<li>标准方法,获取的是计算过后的样式(即获取的样式值是标签最终生效的那个样式值)</li>
+<li>获取的结果为对象形式, 是当前标签所有样式的集合<br><img src="images/param.png" alt="该方法的参数"><br><strong>注意</strong>: 兼容性问题可查看兼容性文档或者MDN解决;</li>
+</ol>
+<ul>
+<li>标签.currentStyle<br>该标签是IE自身支持一种样式获取的方式(所以有兼容性)</li>
+</ul>
+<h3 id="标签内容的设置方式"><a href="#标签内容的设置方式" class="headerlink" title="标签内容的设置方式"></a>标签内容的设置方式</h3><ul>
+<li>使用innerHTML属性设置: 可设置内部的纯文本和标签</li>
+<li>使用innerText属性设置: 可以针对纯文本的设置操作使用</li>
+<li>使用textContent属性设置: 纯文本的设置操作</li>
+</ul>
+<p><strong>注意</strong>: </p>
+<ol>
+<li>后两个有兼容性问题,可查看兼容性文档或者MDN解决; </li>
+<li>该方法只能进行样式值的获取, 结果只读不可设置(结果为字符串带单位)</li>
+</ol>
+<h2 id="DOM事件"><a href="#DOM事件" class="headerlink" title="DOM事件"></a>DOM事件</h2><p>组成部分: </p>
+<ul>
+<li>事件源(触发事件的元素)(被动)</li>
+<li>事件类型(点击, 鼠标移入移出等)</li>
+<li>事件处理程序(函数类型)</li>
+</ul>
+<h2 id="标签内自带属性的操作方式"><a href="#标签内自带属性的操作方式" class="headerlink" title="标签内自带属性的操作方式"></a>标签内自带属性的操作方式</h2><p>对于标签行内自身支持的行内属性 , 可以通过标签.属性名的方式直接操作<br>注意: 在设置时, 由于标签的class属性是一个关键字 , 所以改为className</p>
+<h2 id="标签内自定义属性的操作方式-重要"><a href="#标签内自定义属性的操作方式-重要" class="headerlink" title="标签内自定义属性的操作方式(重要)"></a>标签内自定义属性的操作方式(重要)</h2><h3 id="获取行内自定义属性值-也可以获取自带属性-不常用"><a href="#获取行内自定义属性值-也可以获取自带属性-不常用" class="headerlink" title="获取行内自定义属性值(也可以获取自带属性,不常用)"></a>获取行内自定义属性值(也可以获取自带属性,不常用)</h3><p>标签.getAttribute();</p>
+<h3 id="设置行内自定义属性值"><a href="#设置行内自定义属性值" class="headerlink" title="设置行内自定义属性值"></a>设置行内自定义属性值</h3><p>标签.setAttribute(“要修改的属性名”,”修改成什么值”)   没有返回值</p>
+<h3 id="移除自定义属性"><a href="#移除自定义属性" class="headerlink" title="移除自定义属性"></a>移除自定义属性</h3><p>标签.removeAttribute(“要移除的属性名”)</p>
+<h2 id="索引的取值"><a href="#索引的取值" class="headerlink" title="索引的取值"></a>索引的取值</h2><ul>
+<li><p>自定义属性来操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line"></div><div class="line">    lis[i].setAttribute(<span class="string">"index"</span>,i);</div><div class="line">    lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>.getAttribute(<span class="string">"index"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>自调用函数来操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> j = i;</div><div class="line">        lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(j)</div><div class="line">        &#125;</div><div class="line">    &#125;)();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>最常用的一种方式(也是通过自定义属性)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line">    <span class="comment">//给标签添加自定义属性值, 用于保存某个标签的索引值</span></div><div class="line">    <span class="keyword">this</span>.index = i;</div><div class="line">    lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.index);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="阻止a标签默认跳转的方式"><a href="#阻止a标签默认跳转的方式" class="headerlink" title="阻止a标签默认跳转的方式"></a>阻止a标签默认跳转的方式</h2><p>如果给a标签设置点击事件, 那么自定义点击事件会先执行, 而a标签自带的跳转效果会后执行<br>阻止默认事件:</p>
+<ol>
+<li>在自定义事件代码的最后添加 return false;(跳出函数)</li>
+<li>e.preventDefault()</li>
+</ol>
+<h2 id="DOM节点与节点树"><a href="#DOM节点与节点树" class="headerlink" title="DOM节点与节点树"></a>DOM节点与节点树</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>定义: 对节点树中的所有形式内容的统称</p>
+<h3 id="节点种类"><a href="#节点种类" class="headerlink" title="节点种类"></a>节点种类</h3><ul>
+<li>元素节点: 标签, 页面元素</li>
+<li>文本节点: 文本内容</li>
+<li>属性节点: 标签的行内属性</li>
+<li>注释节点: 注释</li>
+<li>根节点: document(DOM中的顶级对象, 所有DOM的内容均为它的下属内容)</li>
+</ul>
+<h3 id="节点树"><a href="#节点树" class="headerlink" title="节点树"></a>节点树</h3><p>好处: 可以让元素节点的访问方式变得更加简单</p>
+<h2 id="节点访问关系"><a href="#节点访问关系" class="headerlink" title="节点访问关系"></a>节点访问关系</h2><ul>
+<li>上下级访问关系(父子关系)</li>
+<li>同级访问关系(兄弟关系)</li>
+</ul>
+<h3 id="上下级访问"><a href="#上下级访问" class="headerlink" title="上下级访问"></a>上下级访问</h3><ul>
+<li><p>通过一个标签访问父节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">节点.parentNode</div><div class="line"><span class="comment">//注意: 任意节点, 如果具有父节点parentNode的值, 结果已定位元素节点(标签)</span></div><div class="line"><span class="comment">//如: var div = text.parentNode</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>访问子节点的方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. childNodes  获取所有的子节点(获取的结果会包含换行等文本节点)</span></div><div class="line"><span class="comment">//2. children  获取所有元素的子节点(最常用)</span></div><div class="line"><span class="comment">//3. firstChild  获取第一个子节点 , 注意可能会获取到文本节点 </span></div><div class="line"><span class="comment">//4. firstElementChild 获取第一个子节点;ie9以下不支持,可用children代替</span></div><div class="line"><span class="comment">//5. lastChild</span></div><div class="line"><span class="comment">//6. lastElementChild 和firstChild用法一样</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="同级访问关系"><a href="#同级访问关系" class="headerlink" title="同级访问关系"></a>同级访问关系</h3><ul>
+<li><p>获取前一个节点 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. box.previousSibling   //可能会获取到换行等内容</span></div><div class="line"><span class="comment">//2. box.previousElementSibling //有兼容性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>获取后一个节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. box.nextSibling</span></div><div class="line"><span class="comment">//2. box.nextElementSibling   有兼容性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>获取某个元素的所有同级元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可以封装成一个函数</span></div><div class="line"> <span class="keyword">var</span> item = <span class="built_in">document</span>.getElementById(<span class="string">"item"</span>);</div><div class="line">  <span class="comment">//通过item获取到其他的同级元素节点</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(getSiblings(item));</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="comment">//1 先找爹(父元素)</span></div><div class="line">    <span class="keyword">var</span> fa = item.parentNode;</div><div class="line">    <span class="comment">//2 再找儿子(所有子元素)</span></div><div class="line">    <span class="keyword">var</span> sons = fa.children;</div><div class="line">    </div><div class="line">    <span class="comment">//3 取出除我以外的li即可</span></div><div class="line">    <span class="keyword">var</span> resultArr = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; sons.length; i++) &#123;</div><div class="line">      <span class="keyword">if</span> (sons[i] != item) &#123;</div><div class="line">        resultArr.push(sons[i]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> resultArr;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="节点移动"><a href="#节点移动" class="headerlink" title="节点移动"></a>节点移动</h2><ul>
+<li><p>追加子节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//标签.appendChild(要移动的节点)</span></div><div class="line"><span class="comment">//效果: 将要移动的节点添加到调用节点内的所有子节点的最后面</span></div><div class="line"><span class="comment">//如: box.appendChild(tetx)</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>插入子节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//标签.insertBefore(要移动的节点,参考节点)</span></div><div class="line"><span class="comment">//效果: 将要移动的节点插入到指定参考节点之前</span></div><div class="line"><span class="comment">//注意: 参考节点必须为调用元素的子节点才能使用</span></div><div class="line"><span class="comment">//如: box.insertBefore(text,innerP)</span></div><div class="line"><span class="comment">//参数问题:　</span></div><div class="line">　<span class="comment">//1. 正常情况下, 它的两个参数都必须按照规定传入</span></div><div class="line">  <span class="comment">//2. 特殊点, 参数2可以为一些除标签以外的值: null undefined 不能不传</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="克隆节点"><a href="#克隆节点" class="headerlink" title="克隆节点"></a>克隆节点</h3><ul>
+<li>需要克隆的标签不要设置id名<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">标签.cloneNode(布尔值)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>参数<ul>
+<li>默认值为false, false表示浅复制,只复制标签本身,不复制内部内容</li>
+<li>true表示深复制, 复制标签以及内部内容</li>
+<li>无论哪种克隆方式均无法复制标签的内容或内部的属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="替换节点"><a href="#替换节点" class="headerlink" title="替换节点"></a>替换节点</h3><p>replaceChild<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">父节点.replaceChild(新节点,替换哪个子节点)</div><div class="line"><span class="comment">//返回值: 替换掉的节点会被返回, 可以根据需求继续使用</span></div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>: 在XHTML中用nodeName来获取节点</p>
+<h2 id="动态数组与静态数组的问题"><a href="#动态数组与静态数组的问题" class="headerlink" title="动态数组与静态数组的问题"></a>动态数组与静态数组的问题</h2><h2 id="动态创建元素"><a href="#动态创建元素" class="headerlink" title="动态创建元素"></a>动态创建元素</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
+<li>提高页面的响应速度(动态加载结构)</li>
+<li>节省流量(动态加载图片)</li>
+</ul>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><ul>
+<li><p>document.write</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">缺点:　</div><div class="line"><span class="number">1.</span> 无法指定位置添加</div><div class="line"><span class="number">2.</span> 如果在页面加载后使用会导致页面所有内容被清除,所以通常不使用</div></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 可对一个标签进行内容取值以及设置操作,操作时更改内部的文本或标签</div><div class="line"><span class="number">2.</span> 会对标签内部的原有内容进行覆盖</div><div class="line"><span class="number">3.</span> 如果想要保留原有内容,可以先获取原有内容,再与新内容拼接即可(实质还是替换)</div><div class="line"><span class="number">4.</span> 缺点: 如果要创建元素的父盒子内部还有其他标签,则会导致这些标签的事件等内容失效; 执行效率低</div></pre></td></tr></table></figure>
+</li>
+<li><p>document.createElement()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 其创建的元素不会立即在页面中显示,如果想要显示,需要添加到页面中的某个位置(appendChild,insertBefore)</div><div class="line"><span class="number">2.</span> 执行效率高 , 没有特定的应用场景,只要innerHTML不适用即可用</div></pre></td></tr></table></figure>
+</li>
+<li><p>三者的使用场景</p>
+</li>
+</ul>
+<ol>
+<li>如果需要创建的结构大量重复且结构比较复杂时,推荐使用innerHTML(操作方式为字符串拼接)</li>
+<li>如果要进行动态创建元素的位置上具有旧标签, 并且旧标签上可能具有事件,必须使用document.createElement</li>
+</ol>
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><ul>
+<li>匹配成功返回索引值,匹配失败返回-1</li>
+<li>使用indexOf想要匹配成功,参数字符串必须比调用的字符串短</li>
+<li>使用空字符串对其他字符串进行匹配时, 可以在开头立刻匹配成功</li>
+<li>还有第二个参数不常用: 表示调用该方法的字符串中开始查找的位置, 可以是任意整数<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"abcdefg"</span></div><div class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">"c"</span>)) <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">"d"</span>,<span class="number">5</span>)) <span class="comment">//-1</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/DOM笔记/" data-id="cjfp4xaq50005m0x0r84bm17d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM学习/">DOM学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/07/client等三大家族笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          client等三大家族笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/07/BOM笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">BOM笔记</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">-笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM学习/">BOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM学习/">DOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5C3学习/">H5C3学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client、offset、scroll学习/">client、offset、scroll学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/学习/" style="font-size: 20px;">-学习</a> <a href="/tags/BOM学习/" style="font-size: 10px;">BOM学习</a> <a href="/tags/DOM学习/" style="font-size: 10px;">DOM学习</a> <a href="/tags/H5C3学习/" style="font-size: 10px;">H5C3学习</a> <a href="/tags/client、offset、scroll学习/" style="font-size: 10px;">client、offset、scroll学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/面向对象/">bash</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/H5C3笔记/">H5C3笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/client等三大家族笔记/">client等三大家族笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/DOM笔记/">DOM笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

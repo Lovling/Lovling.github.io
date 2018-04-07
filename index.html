@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -133,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/08/面向对象/" data-id="cjfp466ho0005v4x0dqq8m43m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/08/面向对象/" data-id="cjfp4xars000om0x0edsl6xky" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -180,9 +180,682 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cjfp466gv0000v4x0sk0kqkak" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cjfp4xaq00004m0x0r5nesczq" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-H5C3笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/H5C3笔记/" class="article-date">
+  <time datetime="2016-04-07T08:45:03.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/H5C3笔记/">H5C3笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="H5C3"><a href="#H5C3" class="headerlink" title="H5C3"></a>H5C3</h1><h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
+<li>并不是所有的html5都是IE9就兼容的，有一些属性是需要IE10，等更高级的浏览器才能兼容</li>
+</ul>
+<h2 id="H5新增标签"><a href="#H5新增标签" class="headerlink" title="H5新增标签"></a>H5新增标签</h2><ul>
+<li>六大结构标签<ul>
+<li>header</li>
+<li>nav</li>
+<li>section</li>
+<li>aside</li>
+<li>article</li>
+<li>footer</li>
+</ul>
+</li>
+</ul>
+<h3 id="兼容性-1"><a href="#兼容性-1" class="headerlink" title="兼容性"></a>兼容性</h3><ul>
+<li><p>新增标签的兼容性解决办法</p>
+<ul>
+<li><p>通过第三方的包解决</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">  &lt;!-- 直接通过第三方的包解决兼容问题 --&gt;</div><div class="line"> &lt;!-- 但是这个包这么写会在任何浏览器下面都引用，其实高级浏览器是不需要这个包的，我们只需要IE <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> 引用这个包即可 --&gt;</div><div class="line"> &lt;!-- IE hack --&gt;</div><div class="line"> &lt;!-- IE hack的作用就是指在IE版本的浏览器里面有效果，别的浏览器会把它当做注释去解析</div><div class="line"> lt 是小于的意思</div><div class="line"> lte  是小于等于的意思--&gt;</div><div class="line"> &lt;!--[<span class="keyword">if</span> lte IE <span class="number">8</span>]&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"js/html5shiv.min.js"</span>&gt;&lt;/script&gt;</div><div class="line"> &lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过在内存里面创建标签解决</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">  &lt;!-- 通过在内存里面创建标签的方式可以解决兼容问题,默认是行内元素</div><div class="line">这段JS必须放在最前面</div><div class="line"><span class="built_in">document</span>.createElement(<span class="string">'header'</span>);</div><div class="line">split 切割字符串成为数组</div><div class="line">将所有的标签写成字符串并且分割成数组，然后循环数组，每一次循环的时候创建对应的标签 --&gt;</div><div class="line"><span class="keyword">var</span> arr = <span class="string">'header,nav,section,aside,article,footer'</span>.split(<span class="string">','</span>);</div><div class="line"><span class="keyword">var</span> i = arr.length;</div><div class="line"><span class="keyword">while</span>(i--)&#123;</div><div class="line">	<span class="built_in">console</span>.log(i);</div><div class="line">	<span class="built_in">document</span>.createElement(arr[i]);</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(i);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>作用: 增加了语义性, 更有利于SEO优化</p>
+</li>
+<li><p>SEO优化: 含义: 即搜索引擎优化,指通过对网站进行站内优化和修复(网站Web结构调整、网站内容建设、网站代码优化和编码等)和站外优化，从而提高网站的网站关键词排名以及公司产品的曝光度</p>
+</li>
+</ul>
+<p>更多的运用语义化标签, 同时针对一些关键的字符运用权重高的标签去包裹, 如: strong标签去包裹一些重点文字, h1区包裹网站logo  </p>
+<h2 id="H5新增的智能表单-兼容性较大"><a href="#H5新增的智能表单-兼容性较大" class="headerlink" title="H5新增的智能表单(兼容性较大)"></a>H5新增的智能表单(兼容性较大)</h2><ul>
+<li>H5之前的表单: type = text, submit, reset, radio</li>
+<li>input表单的type新属性值<ul>
+<li>type=”email”   –&gt; 限制用户输入必须为Email类型 </li>
+<li>type=”url”     –&gt; 限制用户输入必须为url类型 </li>
+<li>type=”date”    –&gt; 自动生成一个日期控件 </li>
+<li>type=”time”    –&gt; 同上 </li>
+<li>type=”month”   –&gt; 同上  </li>
+<li>type=”week”    –&gt; 同上 </li>
+<li>type=”number”  –&gt; 限制用户输入必须为数字类型  </li>
+<li>type=”range”   –&gt; 产生一个滑动条的表单  </li>
+<li>type=”search”  –&gt; 产生一个搜索意义的表单  </li>
+<li>type=”search”  –&gt; 生成一个颜色选择表单  </li>
+</ul>
+</li>
+</ul>
+<h2 id="智能验证表单-很少使用"><a href="#智能验证表单-很少使用" class="headerlink" title="智能验证表单(很少使用)"></a>智能验证表单(很少使用)</h2><ul>
+<li>required : 验证表单是否为空, 必须配合form表单来使用</li>
+<li>pattern : 自定义验证表单规则, 匹配正则  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">电话号码：&lt;input type=<span class="string">"text"</span> name=<span class="string">""</span> required pattern=<span class="string">"[0-9]&#123;11&#125;"</span>  id=<span class="string">""</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>注意</strong>: 这些属性和自动验证的智能表单必须是submit提交</p>
+<h2 id="表单的新属性-一般"><a href="#表单的新属性-一般" class="headerlink" title="表单的新属性(一般)"></a>表单的新属性(一般)</h2><ul>
+<li>placeholder: 占位文本, 体验好(常用)</li>
+<li>autofocus: 自动获取焦点</li>
+<li>autocomplete: 提交一次后下次自动补全 (条件:必须提交一次,必须要有name属性(因为用submit提交form表单时input必须要有name属性))</li>
+<li><p>multiple: 配合file控件实现多选(重要)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//multiple 让file表单支持多选</span></div><div class="line">&lt;input type=<span class="string">"file"</span> name=<span class="string">""</span> id=<span class="string">""</span> multiple &gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>form: 配合form表单的id值实现关联, 在任意位置都可以被提交(不建议)</p>
+</li>
+</ul>
+<h2 id="智能感应-较少使用"><a href="#智能感应-较少使用" class="headerlink" title="智能感应(较少使用)"></a>智能感应(较少使用)</h2><ul>
+<li>利用表单的list=”datalist的id值” 与 datalist这个标签实现联系<br><img src="images/10.png" alt="demo"></li>
+</ul>
+<h2 id="H5调用视频-或音频"><a href="#H5调用视频-或音频" class="headerlink" title="H5调用视频(或音频)"></a>H5调用视频(或音频)</h2><ul>
+<li>标签: video(audio用法一样)</li>
+</ul>
+<ul>
+<li>标签属性<ul>
+<li>autoplay =&gt; 视频默认加载完播放</li>
+<li>controls =&gt; 播放的控件</li>
+<li>loop     =&gt; 控制循环</li>
+<li>poster   =&gt;在视频没有播放的时候的预览图片</li>
+</ul>
+</li>
+</ul>
+<p><strong>总结</strong>: 实际工作中,若视频较大建议利用第三方网站去实现; 一些小的广告类的小视频以及宣传类的手机站可用video实现 </p>
+<h3 id="视频的API"><a href="#视频的API" class="headerlink" title="视频的API"></a>视频的API</h3><ul>
+<li>play() : 控制视频播放</li>
+<li>pause() : 控制视频暫停</li>
+<li>load() : 重新加载视频音频</li>
+</ul>
+<h3 id="通过第三方网站发布视频"><a href="#通过第三方网站发布视频" class="headerlink" title="通过第三方网站发布视频"></a>通过第三方网站发布视频</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// 好处：</span></div><div class="line"><span class="comment">// 所有的浏览器都支持 ！！</span></div><div class="line"><span class="comment">// 发布在别人的服务器上，不需要占用自己的服务器资源 </span></div><div class="line"></div><div class="line"><span class="comment">// 坏处：</span></div><div class="line"><span class="comment">// 有广告</span></div><div class="line"><span class="comment">// 发布在别的服务器上面，不安全，而且自己不能操控 </span></div><div class="line"></div><div class="line"><span class="comment">// 利用第三方的网站发布视频</span></div><div class="line">&lt;iframe height=<span class="number">498</span> width=<span class="number">510</span> src=<span class="string">'http://player.youku.com/embed/XMjk1OTQ0NTM4OA=='</span> frameborder=<span class="number">0</span> <span class="string">'allowfullscreen'</span>&gt;&lt;/iframe&gt;</div><div class="line"></div><div class="line">&lt;iframe height=<span class="number">498</span> width=<span class="number">510</span> src=<span class="string">'http://player.youku.com/embed/XMTQyMjY4NTI4NA=='</span> frameborder=<span class="number">0</span> <span class="string">'allowfullscreen'</span>&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
+<h2 id="JS获取元素的新方式-兼容IE8及以上"><a href="#JS获取元素的新方式-兼容IE8及以上" class="headerlink" title="JS获取元素的新方式(兼容IE8及以上)"></a>JS获取元素的新方式(兼容IE8及以上)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">'.box'</span>);</div><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">'#box'</span>);</div><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.querySelectorAll(<span class="string">'body &gt; .box'</span>);</div></pre></td></tr></table></figure>
+<h2 id="JS类名操作-移动端常用-兼容IE10及以上"><a href="#JS类名操作-移动端常用-兼容IE10及以上" class="headerlink" title="JS类名操作(移动端常用;兼容IE10及以上)"></a>JS类名操作(移动端常用;兼容IE10及以上)</h2><ul>
+<li>Node.classList.add(‘class’) 添加class</li>
+<li>Node.classList.remove(‘class’) 移除class</li>
+<li>Node.classList.toggle(‘class’) 切换class，有则移除，无则添加</li>
+<li>Node.classList.contains(‘class’) 检测是否存在class</li>
+</ul>
+<p>注: Node指一个有效的DOM节点,统称</p>
+<h2 id="自定义属性-很常用"><a href="#自定义属性-很常用" class="headerlink" title="自定义属性(很常用)"></a>自定义属性(很常用)</h2><ul>
+<li>自定义属性就是一个规范，在H5中，将自定义属性都以data-开头，后面的内容自定</li>
+<li>H5针对自定义属性有一个专门的对象去存储自定义数据  dataset<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//例:</span></div><div class="line"><span class="comment">// HTML:</span></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"box"</span>  data-index=<span class="string">"0"</span> data-index-user=<span class="string">"feifei"</span>&gt;&lt;/div&gt;</div><div class="line">	<span class="comment">// JS:</span></div><div class="line">	<span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">'.box'</span>);</div><div class="line">  <span class="comment">// console.log(box.getAttribute('data-index'));</span></div><div class="line">	<span class="built_in">console</span>.log(box.dataset.index);</div><div class="line">	<span class="built_in">console</span>.log(box.dataset[<span class="string">'index'</span>]);</div><div class="line">	<span class="comment">// 如果涉及到多个-的情况下，利用驼峰去获取</span></div><div class="line">	<span class="built_in">console</span>.log(box.dataset.indexUser);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h1><h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
+<li>关系选择器 ，属性选择器 ，伪类选择器</li>
+</ul>
+<ul>
+<li><p>关系选择器 </p>
+<ul>
+<li>后代选择器   ul li  选择所有的后代元素</li>
+<li>子代选择器   ul &gt; li 选择ul的儿子</li>
+<li>紧邻选择器  .box + li 选择.box后面的一个li元素</li>
+<li>兄弟选择器  .box ~ li 选择.box后面所有的li元素</li>
+</ul>
+</li>
+<li><p>属性选择器  ：通过属性来选择对应的元素</p>
+<ul>
+<li>E[属性名] ： 选择所有的具备这个属性的E元素</li>
+<li>E[属性名=值] ：选择所有的具备这个‘属性 = 对应值’的E元素</li>
+<li><p>E[属性名~=值]：选择所有的包含这个‘属性 = 对应值’的E元素</p>
+<p><strong>css3新增的</strong>：</p>
+</li>
+<li>E[属性名^=值]：从头去匹配这个‘属性 = 对应值’的E元素</li>
+<li>E[属性名$=值]：从尾去匹配这个‘属性 = 对应值’的E元素</li>
+<li>E[属性名*=值]： 从任意位置去匹配这个‘属性 = 对应值’的E元素</li>
+</ul>
+</li>
+<li><p>伪类选择器(重要)</p>
+<ul>
+<li>以前的: before  after  a：link </li>
+<li>E：first-child  找到第一个孩子为E的元素   （css2）</li>
+<li>E：last-child     找到最后一个孩子为E的元素   （css3）</li>
+<li><p>E：nth-child（N）找到第N个孩子为E的元素  （css3）</p>
+</li>
+<li><p>小知识点：<br>（1）even 控制偶数 odd控制奇数<br>（2）nth-child（5n+1） ： N是从0开始逐次+1<br>（3）有一个跟nth-child（）特别类似的一个选择器 nth-of-type（），唯一的区别就是一个侧重的是child  一个侧重的是type类型 后者比前者更宽松<br>（4）选择器在PC端保守使用 都是IE9以上兼容（包括9）</p>
+</li>
+</ul>
+</li>
+<li><p>其他选择器</p>
+<ul>
+<li>input:focus{} =&gt; 选择获取焦点的表单<ul>
+<li>input:checked =&gt; 选择被选中的checkbox表单</li>
+</ul>
+</li>
+<li>input:enabled{} =&gt; 选择可操控的表单元素</li>
+<li>input:disabled{} =&gt; 选择不可操控的表单</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>伪元素 before after  （重要）<br>  作用：由css渲染一个虚拟的标签追加到当前元素的内部的前面或者后面单标签是没有伪元素的</li>
+</ul>
+<ul>
+<li>总结：<ul>
+<li>伪元素默认是行内元素，我们可以进行转化，在实际工作中，多用来模拟一些小的标签去装饰<ul>
+<li>因为伪元素是不存在的，所以不能直接用JS去获取（可以利用类去覆盖之前的样式）</li>
+</ul>
+</li>
+<li>清除浮动的底层原理：就是让一个伪元素（因为伪元素不占dom内存）去清除浮动，从而节约了dom内存，也更加的合理。<ul>
+<li>content一定不能省略，即使里面没有内容，也要写一个空字符串</li>
+<li>伪元素推荐用双冒号，但是IE6,7,8不支持双冒号的写法，所以为了兼容考虑，使用单冒号</li>
+</ul>
+</li>
+<li>当伪类需要配合iconfont去使用的话需要打开iconfont.css 拿到content里面对应的值</li>
+<li>当伪元素需要hover的效果的时候不能直接hover需要借助于父级  写法：父级：hover：伪元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">border-radius</span>: 值;</div></pre></td></tr></table></figure>
+<ul>
+<li>值说明:<ul>
+<li>一个值设置的是盒子的四个角的水平和垂直半径</li>
+<li>每个角都可以单独进行设置 其取值顺序是左上 右上 右下 左下顺时针设置</li>
+<li>可以简写  简写的逻辑跟padding和margin一样</li>
+<li>单位支持像素，和百分比（参照的是宽度和高度）</li>
+<li>可以用 水平半径/垂直半径 去单独控制半径 并且每一个半径都可以单独控制</li>
+</ul>
+</li>
+</ul>
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">box-shadow</span>: 值;</div><div class="line">```  </div><div class="line"><span class="selector-tag">-</span> 值说明:</div><div class="line">  + 第一个值 ：<span class="selector-tag">Npx</span>  阴影向水平方向偏移<span class="selector-tag">N</span>个像素  正数往右 负数往左</div><div class="line">  + 第二个值 ：<span class="selector-tag">Npx</span>  阴影向垂直方向偏移<span class="selector-tag">N</span>个像素  正数往下 负数往上</div><div class="line">  + 第三个值 ：羽化大小 （模糊的大小）</div><div class="line">  + 第四个值 ：阴影尺寸</div><div class="line">  + 第五个值 ：颜色 默认值是黑色</div><div class="line">  + 第六个参数： 内外阴影 默认是外阴影 内阴影是<span class="selector-tag">inset</span></div><div class="line">  + 阴影可以写多个，中间用逗号隔开</div><div class="line">  + 阴影可以简写，但是需要注意有一些值需要补0</div><div class="line"></div><div class="line">### 文字阴影</div><div class="line">```<span class="selector-tag">css</span></div><div class="line"><span class="selector-tag">text-shadow</span>: 水平偏移 垂直偏移 羽化大小 颜色;</div></pre></td></tr></table></figure>
+<h2 id="背景系列"><a href="#背景系列" class="headerlink" title="背景系列"></a>背景系列</h2><h3 id="背景图片的基准点"><a href="#背景图片的基准点" class="headerlink" title="背景图片的基准点"></a>背景图片的基准点</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-origin</span>: 值;</div></pre></td></tr></table></figure>
+<ul>
+<li>值说明:<ul>
+<li>border-box  ：忽略边框 直接从边框的起始 0 ，0点平铺</li>
+<li>padding-box： 默认值，忽略padding 直接从padding的起始 0 ，0点平铺</li>
+<li>content-box ：从内容部分开始平铺 跟padding有关系</li>
+</ul>
+</li>
+</ul>
+<h3 id="多重背景"><a href="#多重背景" class="headerlink" title="多重背景"></a>多重背景</h3><ul>
+<li>说明：背景图片之间用逗号隔开，可以写多组，最先渲染的图片有可能会遮住后面渲染的图片</li>
+</ul>
+<h3 id="控制背景图片的大小-很重要"><a href="#控制背景图片的大小-很重要" class="headerlink" title="控制背景图片的大小(很重要)"></a>控制背景图片的大小(很重要)</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-size</span>: 值;</div></pre></td></tr></table></figure>
+<ul>
+<li>值说明:<ul>
+<li>当只有一个值的情况下，宽度实现拉伸，并且高度会保持等比例，可以支持px，也可以支持百分比，百分比参照的是这个盒子本身的宽高</li>
+<li>当有两个值的情况下，宽度和高度会分别拉伸到对应的值，可能会变形，可以支持px，也可以支持百分比，百分比参照的是这个盒子本身的宽高</li>
+<li>contain 当图片的宽度或者是高度在缩放的时候有一个“碰到”了盒子的边缘，则停止变化，（宽度或高度满足一个即可）</li>
+<li>在contain的基础上保证不留白，这就是cover的效果（宽度和高度都需要满足）</li>
+</ul>
+</li>
+</ul>
+<h3 id="盒子内减-很重要"><a href="#盒子内减-很重要" class="headerlink" title="盒子内减(很重要)"></a>盒子内减(很重要)</h3><ul>
+<li>需要兼容IE9 及其以上 移动端随意</li>
+<li>说明: 盒子的实际宽度是 实际宽度 = width + padding + border，而内减属性会自动帮我们 padding 和 border值 ，所以 用了内减的盒子实际宽度就等于width，至于padding和border的值会自动被width内减掉; 盒子继承的是内减过后的宽度</li>
+</ul>
+<p><strong>注意</strong>:<br>          content-box  不会自动内减<br>                border-box   会自动内减</p>
+<ul>
+<li>移动端常用内减配合百分比布局</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/H5C3笔记/" data-id="cjfp4xape0000m0x0eeu9k6t1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5C3学习/">H5C3学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-client等三大家族笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/client等三大家族笔记/" class="article-date">
+  <time datetime="2016-04-07T08:41:47.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/client等三大家族笔记/">client等三大家族笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h1><h2 id="offsetWidth和offsetHeight"><a href="#offsetWidth和offsetHeight" class="headerlink" title="offsetWidth和offsetHeight"></a>offsetWidth和offsetHeight</h2><h3 id="offsetHeight-offsetWidth同理-的构成"><a href="#offsetHeight-offsetWidth同理-的构成" class="headerlink" title="offsetHeight(offsetWidth同理)的构成"></a>offsetHeight(offsetWidth同理)的构成</h3><ul>
+<li>包括自身高度, 内边距, 边框, 但是不包括外边距<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">offsetHeight = height + padding + border</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="images/4.png" alt="图示"></p>
+<h3 id="offsetHeight与style-height的区别"><a href="#offsetHeight与style-height的区别" class="headerlink" title="offsetHeight与style.height的区别"></a>offsetHeight与style.height的区别</h3><ul>
+<li>demo.style.height只能获取行内样式,若样式写在其他地方则无法获取</li>
+<li>demo.style.height是字符串(且带单位); 而offsetHeight是数值(<strong>重要</strong>)</li>
+<li>domo.style.height可设置行内样式; 而offsetHeight是只读属性,不能设置<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">所以 , 一般用demo.offsetHeight来获取元素的真实宽高;用demo.style.height来设置宽高</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="offsetLeft与offsetTop"><a href="#offsetLeft与offsetTop" class="headerlink" title="offsetLeft与offsetTop"></a>offsetLeft与offsetTop</h2><h3 id="offsetLeft-offsetTop同理-构成"><a href="#offsetLeft-offsetTop同理-构成" class="headerlink" title="offsetLeft(offsetTop同理)构成"></a>offsetLeft(offsetTop同理)构成</h3><ul>
+<li>到距离自身最近的(带有定位的)父元素的左侧/顶部的距离,如果所有的父级都没定位则以body为准</li>
+<li>即: 自身border左侧到父级padding左侧的距离<br><img src="images/5.png" alt="图示"></li>
+</ul>
+<h3 id="offsetLeft与style-left的区别"><a href="#offsetLeft与style-left的区别" class="headerlink" title="offsetLeft与style.left的区别"></a>offsetLeft与style.left的区别</h3><ul>
+<li>style.left只能获取行内样式</li>
+<li>offsetLeft只读,style.left可读可写</li>
+<li>offsetLeft的结果是数值, style.left的结果是字符串且有单位px</li>
+<li>最大区别在于offsetLeft以border左上角为基准,style.left以margin左上角为基准<br><img src="images/6.png" alt="图示"></li>
+</ul>
+<h2 id="offsetParent"><a href="#offsetParent" class="headerlink" title="offsetParent"></a>offsetParent</h2><ul>
+<li>标签.offsetParent表示某个标签外面定位的父盒子(不一定是父节点,也可能是爷爷)</li>
+<li>与parentNode区别<br><img src="images/7.png" alt="区别"></li>
+</ul>
+<p><strong>注意</strong>: offset家族的属性都是只读属性 , 获取的结果是数值</p>
+<h1 id="scroll系列"><a href="#scroll系列" class="headerlink" title="scroll系列"></a>scroll系列</h1><h2 id="scrollWidth与scrollHeight"><a href="#scrollWidth与scrollHeight" class="headerlink" title="scrollWidth与scrollHeight"></a>scrollWidth与scrollHeight</h2><ul>
+<li>是盒子内容的真实宽度和高度, 与盒子大小无关, 只与盒子内容有关</li>
+</ul>
+<h2 id="scrollTop与scrollLeft"><a href="#scrollTop与scrollLeft" class="headerlink" title="scrollTop与scrollLeft"></a>scrollTop与scrollLeft</h2><ul>
+<li>scrollTop是盒子内容被滚动条卷去的头部的高度</li>
+<li>scrollLeft是盒子内容被滚动条卷去的左侧的高度</li>
+</ul>
+<p><strong>注意</strong>: scroll家族最常用的地方就是获取页面被卷去的高度和宽度</p>
+<ul>
+<li>onscroll事件，对于有滚动条的盒子，可以使用onscroll注册滚动事件，每滚动一像素，就会触发该事件。(有兼容性,封装见兼容性文档)</li>
+</ul>
+<h1 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h1><ul>
+<li>用于获取盒子可视区的大小</li>
+<li>有clientWidth clientHeight clientLeft clientTop<br><strong>注意</strong>: 如果内容没有超出盒子范围,则clientWidth与scrollWidth相同<br><img src="images/8.png" alt="图示"></li>
+</ul>
+<h2 id="clientTop与clientLeft"><a href="#clientTop与clientLeft" class="headerlink" title="clientTop与clientLeft"></a>clientTop与clientLeft</h2><ul>
+<li>基本没用, 就是borderTop, borderLeft</li>
+</ul>
+<h2 id="onresize"><a href="#onresize" class="headerlink" title="onresize"></a>onresize</h2><ul>
+<li>窗口大小被调整时触发<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//事件处理程序</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//兼容性</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">client</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        width: <span class="built_in">window</span>.innerWidth || <span class="built_in">document</span>.documentElement.clientWidth || <span class="built_in">document</span>.body.clientWidth || <span class="number">0</span>,</div><div class="line">        height: <span class="built_in">window</span>.innerHeight || <span class="built_in">document</span>.documentElement.clientHeight || <span class="built_in">document</span>.body.clientHeight || <span class="number">0</span></div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="pageX与pageY"><a href="#pageX与pageY" class="headerlink" title="pageX与pageY"></a>pageX与pageY</h1><h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><ul>
+<li>在鼠标事件中, 记录鼠标位置信息的属性有很多, 使用最多的还是pageX,pageY, 但是他们有兼容性问题</li>
+</ul>
+<h3 id="在现代浏览器中，直接通过事件对象就可以获得pageX与pageY"><a href="#在现代浏览器中，直接通过事件对象就可以获得pageX与pageY" class="headerlink" title="在现代浏览器中，直接通过事件对象就可以获得pageX与pageY"></a>在现代浏览器中，直接通过事件对象就可以获得pageX与pageY</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    event = event || <span class="built_in">window</span>.event;</div><div class="line">    <span class="built_in">console</span>.log(event.pageX+<span class="string">"----"</span>+event.pageY);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//在IE678中，并没有pageX与pageY，但是我们可以通过scrollTop + clientY的方式进行计算来获得。</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPage</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">          <span class="comment">//在IE678中使用document.documentElement.scrollLeft就可以获取到scrollTop的值</span></div><div class="line">        x:event.pageX || event.clientX + <span class="built_in">document</span>.documentElement.scrollLeft,</div><div class="line">        y:event.pageY || event.clientY + <span class="built_in">document</span>.documentElement.scrollTop</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h1><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><ul>
+<li>在触发某个事件的时候,都会产生一个事件对象Event, 这个对象中包含所有与事件相关的一些信息, 包括触发事件的元素, 事件的类型以及其他与事件相关的信息</li>
+</ul>
+<h3 id="获取事件对象"><a href="#获取事件对象" class="headerlink" title="获取事件对象"></a>获取事件对象</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对于现代浏览器,只需要在注册事件的时候指定一个形参(event或e),直接使用即可</span></div><div class="line"><span class="comment">//对于IE678,指定形参(event或e)之后,还要通过window.event或window.e来获取</span></div><div class="line"><span class="comment">//兼容性封装:</span></div><div class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">      <span class="comment">//只要用到了事件对象，就要记得处理浏览器兼容性</span></div><div class="line">    event = event || <span class="built_in">window</span>.event;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="事件对象的属性"><a href="#事件对象的属性" class="headerlink" title="事件对象的属性"></a>事件对象的属性</h3><p><strong>注意</strong>: 事件对象的属性有很多,常用的只有鼠标位置信息和键盘码相关信息</p>
+<ul>
+<li>记录鼠标位置信息的相关属性<ul>
+<li>screenX与screenY: 光标相对于屏幕左上角的水平位置与垂直位置</li>
+<li>clientX与clientY: 光标相对于可视区左上角的水平位置与垂直位置</li>
+<li>pageX与pageY: 光标相对于网页(文档document)左上角的水平位置与垂直位置</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>记录键盘码的属性<ul>
+<li>event.keyCode: 键盘按下那个键的键盘码  </li>
+</ul>
+</li>
+</ul>
+<h1 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h1><ul>
+<li>事件的捕获阶段</li>
+<li>事件的目标阶段</li>
+<li>事件的冒泡阶段</li>
+</ul>
+<p><img src="images/9.png" alt="事件阶段"></p>
+<h2 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h2><ul>
+<li>当一个元素的事件被触发时, 同样的事件将会在该元素的所有祖先元素中依次触发(IE提出)<br><img src="images/bubble.png" alt="冒泡"></li>
+</ul>
+<h3 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h3><ul>
+<li><p>正常浏览器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">link.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    event = event || <span class="built_in">window</span>.event;</div><div class="line">    <span class="comment">//stop :停止  propagation：传播</span></div><div class="line">    event.stopPropagation();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ie678</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">link.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    event = event || <span class="built_in">window</span>.event;   </div><div class="line">    event.cancelBubble = <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line"><span class="string">* 兼容性处理</span></div><div class="line"><span class="string">`</span><span class="string">``</span>js</div><div class="line">link.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    event = event || <span class="built_in">window</span>.event;</div><div class="line">    <span class="keyword">if</span>(event.stopPropagation)&#123;</div><div class="line">          event.stopPropagation();</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">          event.cancelBubble = <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="事件捕获"><a href="#事件捕获" class="headerlink" title="事件捕获"></a>事件捕获</h2><ul>
+<li>事件捕获是火狐浏览器提出来的，IE678不支持事件捕获（基本上，我们都是用事件冒泡） 事件的处理将从DOM层次的根开始，而不是从触发事件的目标元素开始，事件被从目标元素的所有祖先元素依次往下传递<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//当addEventListener第三个参数为true时，表示事件捕获</span></div><div class="line">arr[i].addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">&#125;,<span class="literal">true</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="images/capture.png" alt="捕获"></p>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><blockquote>
+<p>正则表达式：用于匹配规律规则的表达式，经常用于表单校验，高级搜索等。</p>
+</blockquote>
+<h2 id="创建正则表达式"><a href="#创建正则表达式" class="headerlink" title="创建正则表达式"></a>创建正则表达式</h2><ul>
+<li>构造函数的方式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> regExp = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/\d/</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>正则字面量</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> regExp = <span class="regexp">/\d/</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>正则的使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/\d/.test(<span class="string">"aaa1"</span>);</div></pre></td></tr></table></figure>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><blockquote>
+<p>正则表达式由一些普通字符和元字符组成，普通字符包括大小写字母、数字等，而元字符则具有特殊的含义。</p>
+</blockquote>
+<h3 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h3><p> 正则表达式中具有特殊意义的字符。</p>
+<p><img src="images\yuan.png" alt="yuan"></p>
+<h3 id="正则优先级"><a href="#正则优先级" class="headerlink" title="正则优先级"></a>正则优先级</h3><p><code>|</code>表示或，优先级最低</p>
+<p><code>()</code>优先级最高</p>
+<h2 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h2><p><code>[]</code>在正则表达式中表示一个字符的位置，[]里面写这个位置可以出现的字符。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[abc]/</span>);<span class="comment">//匹配a,b,c</span></div></pre></td></tr></table></figure>
+<p><code>[^]</code>在中扩号中的^表示非的意思。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//^表示该位置不可以出现的字符</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[^abc]/</span>);<span class="comment">//匹配除了a，b，c以外的其他字符</span></div></pre></td></tr></table></figure>
+<p><code>[a-z]</code> <code>[1-9]</code>表示范围</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[a-z]/</span>.test(<span class="string">"d"</span>));<span class="comment">//小写字母</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[A-Z]/</span>.test(<span class="string">"d"</span>));<span class="comment">//大写字母</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[0-9]/</span>.test(<span class="string">"8"</span>));<span class="comment">//数字</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/[a-zA-Z0-9]/</span>);<span class="comment">//所有的小写字母和大写字母以及数字</span></div></pre></td></tr></table></figure>
+<h2 id="正则进阶"><a href="#正则进阶" class="headerlink" title="正则进阶"></a>正则进阶</h2><h3 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h3><blockquote>
+<p>我们前面学习的学习的正则只要有满足的条件的就会返回true，并不能做到精确的匹配。</p>
+</blockquote>
+<p>^表示开头   <strong><em>[]里面的^表示取反</em></strong></p>
+<p>$表示结尾</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^chuan/</span>.test(<span class="string">"dachuan"</span>));<span class="comment">//必须以chuan开头</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/chuan$/</span>.test(<span class="string">"chuang"</span>));<span class="comment">//必须以chuan结尾</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^chuan$/</span>.test(<span class="string">"chuan"</span>));<span class="comment">//精确匹配chuan</span></div><div class="line"></div><div class="line"><span class="comment">//精确匹配chuan,表示必须是这个</span></div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^chuan$/</span>.test(<span class="string">"chuanchuan"</span>));<span class="comment">//fasle</span></div></pre></td></tr></table></figure>
+<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><blockquote>
+<p>量词用来控制出现的次数，一般来说量词和边界会一起使用</p>
+</blockquote>
+<ol>
+<li><code>*</code>表示能够出现0次或者更多次，x&gt;=0;</li>
+<li><code>+</code>表示能够出现1次或者多次，x&gt;=1</li>
+<li><code>?</code>表示能够出现0次或者1次，x=0或者x=1</li>
+<li><code>{n}</code>表示能够出现n次</li>
+<li><code>{n,}</code>表示能够出现n次或者n次以上</li>
+<li><code>{n,m}</code>表示能够出现n-m次</li>
+</ol>
+<p>思考：如何使用{}来表示*+? </p>
+<h2 id="括号总结"><a href="#括号总结" class="headerlink" title="括号总结"></a>括号总结</h2><p><code>{}</code>大括号限定出现的次数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/chuan&#123;2&#125;/</span>.test(<span class="string">"chuanchuan"</span>));</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/chuan&#123;2&#125;/</span>.test(<span class="string">"chuann"</span>));</div></pre></td></tr></table></figure>
+<p><code>[]</code>表示一个字符出现的位置</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^[fb]oot$/</span>.test(<span class="string">"foot"</span>));</div><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^[fb]oot$/</span>.test(<span class="string">"boot"</span>));</div></pre></td></tr></table></figure>
+<p><code>()</code>用来提升优先级</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="regexp">/^(chuan)&#123;2&#125;$/</span>.test(<span class="string">"chuanchuan"</span>));</div></pre></td></tr></table></figure>
+<h2 id="案例练习"><a href="#案例练习" class="headerlink" title="案例练习"></a>案例练习</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">talk is cheap show me the code.</div><div class="line"></div><div class="line">															-- Linus Torvalds</div><div class="line">																李纳斯•托沃兹</div></pre></td></tr></table></figure>
+<ol>
+<li><p>验证座机</p>
+<ul>
+<li>比如010-12345678  0797-1234567</li>
+<li>开头是3-4位，首位必须是0</li>
+<li>-后面是7-8位</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> phoneReg = <span class="regexp">/^0\d&#123;2,3&#125;-\d&#123;7,8&#125;$/</span>;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>验证姓名</p>
+<ul>
+<li>只能是汉字</li>
+<li>长度2-6位之间</li>
+<li>汉字范围[\u4e00-\u9fa5]</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> nameReg = <span class="regexp">/^[\u4e00-\u9fa5]&#123;2,6&#125;$/</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>验证QQ</p>
+<ul>
+<li>只能是数字</li>
+<li>开头不能是0</li>
+<li>长度为5-11位</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> qqReg = <span class="regexp">/^[1-9]\d&#123;4,10&#125;$/</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>验证手机</p>
+<ul>
+<li>11位数字组成</li>
+<li>号段13[0-9] 147 15[0-9] 177[0178] 18[0-9]</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mobileReg = <span class="regexp">/^(13[0-9]|147|15[0-9]|17[0178]|18[0-9])\d&#123;8&#125;$/</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>验证邮箱</p>
+<ul>
+<li>前面是字母或者数字</li>
+<li>必须有@</li>
+<li>@后面是字母或者数字</li>
+<li>必须有.</li>
+<li>.后面是字母或者数字</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> emailReg = <span class="regexp">/^\w+@\w+(\.\w+)+$/</span>;</div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/client等三大家族笔记/" data-id="cjfp4xaqk000am0x08lgyo3ln" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/client、offset、scroll学习/">client、offset、scroll学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DOM笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/DOM笔记/" class="article-date">
+  <time datetime="2016-04-07T08:38:25.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/DOM笔记/">DOM笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM(文档对象模型)"></a>DOM(文档对象模型)</h1><p>定义: 是一套操作html和xml文档的API</p>
+<ul>
+<li>使用DOM操作的标签以及其他内容均为对象的形式</li>
+</ul>
+<h2 id="获取元素的方式"><a href="#获取元素的方式" class="headerlink" title="获取元素的方式"></a>获取元素的方式</h2><h3 id="根据id"><a href="#根据id" class="headerlink" title="根据id"></a>根据id</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>:</p>
+<ul>
+<li>使用document.getElementById获取元素失败时,结果为null</li>
+<li>获取位置,如果在head中书写js代码获取元素, 需要考虑标签是否生成,如果写在入口函数里就不用考虑</li>
+<li>通常情况下我们不写入口函数,所以一般js代码都会放在body标签内部的最底部<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//入口函数:</span></div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//在这里书写的js代码可以不用考虑其放置的位置</span></div><div class="line">    <span class="comment">//作用: 在入口函数内书写的代码会在页面完全加载(结构,图片,文件)后执行</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="根据标签名"><a href="#根据标签名" class="headerlink" title="根据标签名"></a>根据标签名</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// document.getElementsByTagName("标签名")  //结果是伪数组,所以想要操作内部的标签第一步就是遍历</span></div><div class="line">&lt;div id=<span class="string">"box"</span>&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">     &lt;div&gt;&lt;/div&gt;</div><div class="line">&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;div&gt;&lt;/</span>div&gt;</div><div class="line">&lt;div&gt;&lt;/div&gt;</div><div class="line"><span class="comment">//获取box内部的div标签: </span></div><div class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">"box"</span>)</div><div class="line"><span class="keyword">var</span> divs = box.document.getElementsByTagName(<span class="string">"div"</span>)</div></pre></td></tr></table></figure>
+<p><strong>注意</strong>: 如果想要在某个父标签内获取指定的一些子标签,可以将document.getElementsByTagName前面的标签更换</p>
+<h3 id="根据类名获取"><a href="#根据类名获取" class="headerlink" title="根据类名获取"></a>根据类名获取</h3><p>兼容性: </p>
+<ol>
+<li>IE9以下不支持, IE也没有对应的功能,需要自己写代码实现</li>
+<li>能力检测见兼容性文档<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">标签.getElementsByClassName()</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="DOM样式操作"><a href="#DOM样式操作" class="headerlink" title="DOM样式操作"></a>DOM样式操作</h2><p>别忘记先获取元素</p>
+<h3 id="标签样式的设置方式"><a href="#标签样式的设置方式" class="headerlink" title="标签样式的设置方式"></a>标签样式的设置方式</h3><ul>
+<li><p>style<br>设置的样式值为字符串类型, 有单位加单位 , 且设置的样式为行内样式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">box.style.color = <span class="string">"red"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>getComputedStyle()</p>
+</li>
+</ul>
+<ol>
+<li>标准方法,获取的是计算过后的样式(即获取的样式值是标签最终生效的那个样式值)</li>
+<li>获取的结果为对象形式, 是当前标签所有样式的集合<br><img src="images/param.png" alt="该方法的参数"><br><strong>注意</strong>: 兼容性问题可查看兼容性文档或者MDN解决;</li>
+</ol>
+<ul>
+<li>标签.currentStyle<br>该标签是IE自身支持一种样式获取的方式(所以有兼容性)</li>
+</ul>
+<h3 id="标签内容的设置方式"><a href="#标签内容的设置方式" class="headerlink" title="标签内容的设置方式"></a>标签内容的设置方式</h3><ul>
+<li>使用innerHTML属性设置: 可设置内部的纯文本和标签</li>
+<li>使用innerText属性设置: 可以针对纯文本的设置操作使用</li>
+<li>使用textContent属性设置: 纯文本的设置操作</li>
+</ul>
+<p><strong>注意</strong>: </p>
+<ol>
+<li>后两个有兼容性问题,可查看兼容性文档或者MDN解决; </li>
+<li>该方法只能进行样式值的获取, 结果只读不可设置(结果为字符串带单位)</li>
+</ol>
+<h2 id="DOM事件"><a href="#DOM事件" class="headerlink" title="DOM事件"></a>DOM事件</h2><p>组成部分: </p>
+<ul>
+<li>事件源(触发事件的元素)(被动)</li>
+<li>事件类型(点击, 鼠标移入移出等)</li>
+<li>事件处理程序(函数类型)</li>
+</ul>
+<h2 id="标签内自带属性的操作方式"><a href="#标签内自带属性的操作方式" class="headerlink" title="标签内自带属性的操作方式"></a>标签内自带属性的操作方式</h2><p>对于标签行内自身支持的行内属性 , 可以通过标签.属性名的方式直接操作<br>注意: 在设置时, 由于标签的class属性是一个关键字 , 所以改为className</p>
+<h2 id="标签内自定义属性的操作方式-重要"><a href="#标签内自定义属性的操作方式-重要" class="headerlink" title="标签内自定义属性的操作方式(重要)"></a>标签内自定义属性的操作方式(重要)</h2><h3 id="获取行内自定义属性值-也可以获取自带属性-不常用"><a href="#获取行内自定义属性值-也可以获取自带属性-不常用" class="headerlink" title="获取行内自定义属性值(也可以获取自带属性,不常用)"></a>获取行内自定义属性值(也可以获取自带属性,不常用)</h3><p>标签.getAttribute();</p>
+<h3 id="设置行内自定义属性值"><a href="#设置行内自定义属性值" class="headerlink" title="设置行内自定义属性值"></a>设置行内自定义属性值</h3><p>标签.setAttribute(“要修改的属性名”,”修改成什么值”)   没有返回值</p>
+<h3 id="移除自定义属性"><a href="#移除自定义属性" class="headerlink" title="移除自定义属性"></a>移除自定义属性</h3><p>标签.removeAttribute(“要移除的属性名”)</p>
+<h2 id="索引的取值"><a href="#索引的取值" class="headerlink" title="索引的取值"></a>索引的取值</h2><ul>
+<li><p>自定义属性来操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line"></div><div class="line">    lis[i].setAttribute(<span class="string">"index"</span>,i);</div><div class="line">    lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>.getAttribute(<span class="string">"index"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>自调用函数来操作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> j = i;</div><div class="line">        lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(j)</div><div class="line">        &#125;</div><div class="line">    &#125;)();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>最常用的一种方式(也是通过自定义属性)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//body中很多li</span></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lis.length; i++)&#123;</div><div class="line">    <span class="comment">//给标签添加自定义属性值, 用于保存某个标签的索引值</span></div><div class="line">    <span class="keyword">this</span>.index = i;</div><div class="line">    lis[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.index);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="阻止a标签默认跳转的方式"><a href="#阻止a标签默认跳转的方式" class="headerlink" title="阻止a标签默认跳转的方式"></a>阻止a标签默认跳转的方式</h2><p>如果给a标签设置点击事件, 那么自定义点击事件会先执行, 而a标签自带的跳转效果会后执行<br>阻止默认事件:</p>
+<ol>
+<li>在自定义事件代码的最后添加 return false;(跳出函数)</li>
+<li>e.preventDefault()</li>
+</ol>
+<h2 id="DOM节点与节点树"><a href="#DOM节点与节点树" class="headerlink" title="DOM节点与节点树"></a>DOM节点与节点树</h2><h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><p>定义: 对节点树中的所有形式内容的统称</p>
+<h3 id="节点种类"><a href="#节点种类" class="headerlink" title="节点种类"></a>节点种类</h3><ul>
+<li>元素节点: 标签, 页面元素</li>
+<li>文本节点: 文本内容</li>
+<li>属性节点: 标签的行内属性</li>
+<li>注释节点: 注释</li>
+<li>根节点: document(DOM中的顶级对象, 所有DOM的内容均为它的下属内容)</li>
+</ul>
+<h3 id="节点树"><a href="#节点树" class="headerlink" title="节点树"></a>节点树</h3><p>好处: 可以让元素节点的访问方式变得更加简单</p>
+<h2 id="节点访问关系"><a href="#节点访问关系" class="headerlink" title="节点访问关系"></a>节点访问关系</h2><ul>
+<li>上下级访问关系(父子关系)</li>
+<li>同级访问关系(兄弟关系)</li>
+</ul>
+<h3 id="上下级访问"><a href="#上下级访问" class="headerlink" title="上下级访问"></a>上下级访问</h3><ul>
+<li><p>通过一个标签访问父节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">节点.parentNode</div><div class="line"><span class="comment">//注意: 任意节点, 如果具有父节点parentNode的值, 结果已定位元素节点(标签)</span></div><div class="line"><span class="comment">//如: var div = text.parentNode</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>访问子节点的方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. childNodes  获取所有的子节点(获取的结果会包含换行等文本节点)</span></div><div class="line"><span class="comment">//2. children  获取所有元素的子节点(最常用)</span></div><div class="line"><span class="comment">//3. firstChild  获取第一个子节点 , 注意可能会获取到文本节点 </span></div><div class="line"><span class="comment">//4. firstElementChild 获取第一个子节点;ie9以下不支持,可用children代替</span></div><div class="line"><span class="comment">//5. lastChild</span></div><div class="line"><span class="comment">//6. lastElementChild 和firstChild用法一样</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="同级访问关系"><a href="#同级访问关系" class="headerlink" title="同级访问关系"></a>同级访问关系</h3><ul>
+<li><p>获取前一个节点 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. box.previousSibling   //可能会获取到换行等内容</span></div><div class="line"><span class="comment">//2. box.previousElementSibling //有兼容性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>获取后一个节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. box.nextSibling</span></div><div class="line"><span class="comment">//2. box.nextElementSibling   有兼容性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>获取某个元素的所有同级元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//可以封装成一个函数</span></div><div class="line"> <span class="keyword">var</span> item = <span class="built_in">document</span>.getElementById(<span class="string">"item"</span>);</div><div class="line">  <span class="comment">//通过item获取到其他的同级元素节点</span></div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(getSiblings(item));</div><div class="line">  </div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">item</span>) </span>&#123;</div><div class="line">    <span class="comment">//1 先找爹(父元素)</span></div><div class="line">    <span class="keyword">var</span> fa = item.parentNode;</div><div class="line">    <span class="comment">//2 再找儿子(所有子元素)</span></div><div class="line">    <span class="keyword">var</span> sons = fa.children;</div><div class="line">    </div><div class="line">    <span class="comment">//3 取出除我以外的li即可</span></div><div class="line">    <span class="keyword">var</span> resultArr = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; sons.length; i++) &#123;</div><div class="line">      <span class="keyword">if</span> (sons[i] != item) &#123;</div><div class="line">        resultArr.push(sons[i]);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> resultArr;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="节点移动"><a href="#节点移动" class="headerlink" title="节点移动"></a>节点移动</h2><ul>
+<li><p>追加子节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//标签.appendChild(要移动的节点)</span></div><div class="line"><span class="comment">//效果: 将要移动的节点添加到调用节点内的所有子节点的最后面</span></div><div class="line"><span class="comment">//如: box.appendChild(tetx)</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>插入子节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//标签.insertBefore(要移动的节点,参考节点)</span></div><div class="line"><span class="comment">//效果: 将要移动的节点插入到指定参考节点之前</span></div><div class="line"><span class="comment">//注意: 参考节点必须为调用元素的子节点才能使用</span></div><div class="line"><span class="comment">//如: box.insertBefore(text,innerP)</span></div><div class="line"><span class="comment">//参数问题:　</span></div><div class="line">　<span class="comment">//1. 正常情况下, 它的两个参数都必须按照规定传入</span></div><div class="line">  <span class="comment">//2. 特殊点, 参数2可以为一些除标签以外的值: null undefined 不能不传</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="克隆节点"><a href="#克隆节点" class="headerlink" title="克隆节点"></a>克隆节点</h3><ul>
+<li>需要克隆的标签不要设置id名<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">标签.cloneNode(布尔值)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>参数<ul>
+<li>默认值为false, false表示浅复制,只复制标签本身,不复制内部内容</li>
+<li>true表示深复制, 复制标签以及内部内容</li>
+<li>无论哪种克隆方式均无法复制标签的内容或内部的属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="替换节点"><a href="#替换节点" class="headerlink" title="替换节点"></a>替换节点</h3><p>replaceChild<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">父节点.replaceChild(新节点,替换哪个子节点)</div><div class="line"><span class="comment">//返回值: 替换掉的节点会被返回, 可以根据需求继续使用</span></div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>: 在XHTML中用nodeName来获取节点</p>
+<h2 id="动态数组与静态数组的问题"><a href="#动态数组与静态数组的问题" class="headerlink" title="动态数组与静态数组的问题"></a>动态数组与静态数组的问题</h2><h2 id="动态创建元素"><a href="#动态创建元素" class="headerlink" title="动态创建元素"></a>动态创建元素</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
+<li>提高页面的响应速度(动态加载结构)</li>
+<li>节省流量(动态加载图片)</li>
+</ul>
+<h3 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h3><ul>
+<li><p>document.write</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">缺点:　</div><div class="line"><span class="number">1.</span> 无法指定位置添加</div><div class="line"><span class="number">2.</span> 如果在页面加载后使用会导致页面所有内容被清除,所以通常不使用</div></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 可对一个标签进行内容取值以及设置操作,操作时更改内部的文本或标签</div><div class="line"><span class="number">2.</span> 会对标签内部的原有内容进行覆盖</div><div class="line"><span class="number">3.</span> 如果想要保留原有内容,可以先获取原有内容,再与新内容拼接即可(实质还是替换)</div><div class="line"><span class="number">4.</span> 缺点: 如果要创建元素的父盒子内部还有其他标签,则会导致这些标签的事件等内容失效; 执行效率低</div></pre></td></tr></table></figure>
+</li>
+<li><p>document.createElement()</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 其创建的元素不会立即在页面中显示,如果想要显示,需要添加到页面中的某个位置(appendChild,insertBefore)</div><div class="line"><span class="number">2.</span> 执行效率高 , 没有特定的应用场景,只要innerHTML不适用即可用</div></pre></td></tr></table></figure>
+</li>
+<li><p>三者的使用场景</p>
+</li>
+</ul>
+<ol>
+<li>如果需要创建的结构大量重复且结构比较复杂时,推荐使用innerHTML(操作方式为字符串拼接)</li>
+<li>如果要进行动态创建元素的位置上具有旧标签, 并且旧标签上可能具有事件,必须使用document.createElement</li>
+</ol>
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><ul>
+<li>匹配成功返回索引值,匹配失败返回-1</li>
+<li>使用indexOf想要匹配成功,参数字符串必须比调用的字符串短</li>
+<li>使用空字符串对其他字符串进行匹配时, 可以在开头立刻匹配成功</li>
+<li>还有第二个参数不常用: 表示调用该方法的字符串中开始查找的位置, 可以是任意整数<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"abcdefg"</span></div><div class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">"c"</span>)) <span class="comment">//2</span></div><div class="line"><span class="built_in">console</span>.log(str.indexOf(<span class="string">"d"</span>,<span class="number">5</span>)) <span class="comment">//-1</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/DOM笔记/" data-id="cjfp4xaq50005m0x0r84bm17d" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM学习/">DOM学习</a></li></ul>
+
     </footer>
   </div>
   
@@ -281,7 +954,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/07/BOM笔记/" data-id="cjfp466h60001v4x09qh799xh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/07/BOM笔记/" data-id="cjfp4xapo0001m0x09y4f4kqx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BOM学习/">BOM学习</a></li></ul>
@@ -342,7 +1015,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/08/远程仓库/" data-id="cjfp466hr0006v4x03tbz5i2a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/08/远程仓库/" data-id="cjfp4xarw000pm0x0lg5tozkw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">-学习</a></li></ul>
@@ -416,7 +1089,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/08/分支学习/" data-id="cjfp466hc0002v4x0tn9h7j7r" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/08/分支学习/" data-id="cjfp4xaqb0006m0x0pypcedmy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">-学习</a></li></ul>
@@ -435,7 +1108,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorier</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">-笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
     </div>
@@ -447,7 +1120,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM学习/">BOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM学习/">BOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOM学习/">DOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5C3学习/">H5C3学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/client、offset、scroll学习/">client、offset、scroll学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
   </div>
 
@@ -457,14 +1130,14 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/学习/" style="font-size: 20px;">-学习</a> <a href="/tags/BOM学习/" style="font-size: 10px;">BOM学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+      <a href="/tags/学习/" style="font-size: 20px;">-学习</a> <a href="/tags/BOM学习/" style="font-size: 10px;">BOM学习</a> <a href="/tags/DOM学习/" style="font-size: 10px;">DOM学习</a> <a href="/tags/H5C3学习/" style="font-size: 10px;">H5C3学习</a> <a href="/tags/client、offset、scroll学习/" style="font-size: 10px;">client、offset、scroll学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
     </div>
@@ -474,7 +1147,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -487,15 +1160,15 @@
           </li>
         
           <li>
-            <a href="/2016/04/07/BOM笔记/">BOM笔记</a>
+            <a href="/2016/04/07/H5C3笔记/">H5C3笔记</a>
           </li>
         
           <li>
-            <a href="/2015/10/08/远程仓库/">远程仓库</a>
+            <a href="/2016/04/07/client等三大家族笔记/">client等三大家族笔记</a>
           </li>
         
           <li>
-            <a href="/2015/10/08/分支学习/">分支学习</a>
+            <a href="/2016/04/07/DOM笔记/">DOM笔记</a>
           </li>
         
       </ul>
