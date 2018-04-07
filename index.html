@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,42 +60,6 @@
 </header>
       <div class="outer">
         <section id="main">
-  
-    <article id="post-远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/08/远程仓库/" class="article-date">
-  <time datetime="2017-10-08T06:49:51.000Z" itemprop="datePublished">2017-10-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/08/远程仓库/">远程仓库</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/08/远程仓库/" data-id="cj8ie3rtk000200x0lzay1pdk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -169,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/08/面向对象/" data-id="cj8ie3rtw000500x0y2sjxanm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/08/面向对象/" data-id="cjfp466ho0005v4x0dqq8m43m" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
@@ -216,9 +180,173 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cj8ie3rt4000000x0xr6a0vlz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cjfp466gv0000v4x0sk0kqkak" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-BOM笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/07/BOM笔记/" class="article-date">
+  <time datetime="2016-04-07T08:14:01.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/BOM笔记/">BOM笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="BOM-browser-object-model"><a href="#BOM-browser-object-model" class="headerlink" title="BOM(browser object model)"></a>BOM(browser object model)</h1><ul>
+<li>浏览器对象模型</li>
+<li>作用: 提供了一套可以操作浏览器相关功能的方法</li>
+<li>DOM实际上是BOM中的一个重要组成部分</li>
+</ul>
+<h2 id="BOM顶级对象window"><a href="#BOM顶级对象window" class="headerlink" title="BOM顶级对象window"></a>BOM顶级对象window</h2><ul>
+<li>window也是js在浏览器环境中的顶级对象</li>
+<li>由于是顶级对象,所以属性和方法很多, 当我们使用这些方法时,可以不加window</li>
+<li>所有的全局变量以及函数都是window的属性和方法</li>
+</ul>
+<p><strong>注意</strong>: 如果想要在局部作用域中访问全局变量的值,推荐使用<em>window.属性名</em>的形式</p>
+<h2 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h2><p>window.location</p>
+<h3 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h3><ul>
+<li>location.href = “要跳转到的地址”</li>
+<li>location.assign(“要跳转的地址”)   与href相同</li>
+<li>location.replace(“要跳转的地址”)  没有回退的记录</li>
+</ul>
+<h3 id="页面刷新"><a href="#页面刷新" class="headerlink" title="页面刷新"></a>页面刷新</h3><ul>
+<li>location.reload()</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>window.location.hash</li>
+<li>window.location.host</li>
+<li>window.location.hostname</li>
+<li>window.location.port</li>
+<li>window.location.pathname</li>
+<li>window.location.protocol</li>
+<li>window.location.search</li>
+</ul>
+<h2 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h2><p>window.navigator</p>
+<ul>
+<li>navigator.platform   用于显示当前设置的运行平台(系统)</li>
+<li>navigator.userAgent  用户代理字符串: 老式的兼容性检测方式(用于判断浏览器的信息)</li>
+</ul>
+<h2 id="history方法"><a href="#history方法" class="headerlink" title="history方法"></a>history方法</h2><ul>
+<li>history.go(1)       前进页面</li>
+<li>history.go(-1)      后退页面</li>
+<li>history.forward()   前进页面 </li>
+<li>history.back()      后退页面 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a页面</span></div><div class="line">location.href = <span class="string">"b.html"</span></div><div class="line"><span class="comment">//b页面</span></div><div class="line">history.go(<span class="number">-1</span>)或者history.back()  <span class="comment">//可从b页面回到a页面</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><ul>
+<li><p>open打开一个新页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//有三个参数:</span></div><div class="line"><span class="comment">//1. 地址</span></div><div class="line"><span class="comment">//2. 打开方式</span></div><div class="line"><span class="comment">//3. 打开的新页面的样式信息</span></div><div class="line"><span class="built_in">window</span>.open(<span class="string">"a.html"</span>,<span class="string">"_blank"</span>,<span class="string">"width=300,height=300"</span>)</div><div class="line"><span class="comment">//返回值为: 打开的新页面的window对象</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>close关闭页面  window.close()</p>
+</li>
+<li>其他小方法: moveTo  moveBy  resizeTo  resizeBy</li>
+</ul>
+<h2 id="定时器-重点"><a href="#定时器-重点" class="headerlink" title="定时器(重点)"></a>定时器(重点)</h2><h3 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout"></a>setTimeout</h3><ul>
+<li>参数1: 时间到达要做的事情</li>
+<li>参数2: 延迟执行的时间(毫秒形式)</li>
+<li>返回值: 为当前定时器的标识(定时器id) 常声明为timer </li>
+<li>timeout的清除: clearTimeout(timer) 参数是定时器的标识</li>
+</ul>
+<h3 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval"></a>setInterval</h3><ul>
+<li>间隔执行</li>
+<li>参数同timeout</li>
+<li>清除方式: clearInterval(timer)</li>
+</ul>
+<h2 id="Date方法"><a href="#Date方法" class="headerlink" title="Date方法"></a>Date方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>() <span class="comment">//获取当前本地时间</span></div><div class="line">date.getFullYear()    <span class="comment">//获取年份</span></div><div class="line">date.getMonth()       <span class="comment">//获取月份, 值为0-11</span></div><div class="line">date.getDate()        <span class="comment">//获取日</span></div><div class="line">date.getDay()         <span class="comment">//获取星期, 星期日为0</span></div><div class="line">date.getHours()       <span class="comment">//获取小时</span></div><div class="line">date.getMinutes()     <span class="comment">//获取分钟</span></div><div class="line">date.getSeconds()     <span class="comment">//秒</span></div><div class="line">date.getMilliseconds()<span class="comment">//毫秒  0-999   </span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 格式化当前时间函数封装</span></div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> time = <span class="string">""</span>;</div><div class="line">        <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">        time += date.getFullYear()+<span class="string">"-"</span>;</div><div class="line">        time += date.getMonth()+<span class="number">1</span>+<span class="string">"-"</span>;</div><div class="line">        time += date.getDate()+<span class="string">" "</span>;</div><div class="line">        time += date.getHours()+<span class="string">":"</span>;</div><div class="line">        time += date.getMinutes()+<span class="string">":"</span>;</div><div class="line">        time += date.getSeconds();</div><div class="line">        <span class="keyword">return</span> time;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">console</span>.log(formatDate());</div><div class="line">    <span class="comment">//1.动态的格式化当前时间, 比如把日期的横杠替换为任意输入的符号</span></div><div class="line">    <span class="comment">//2.把24小时制的时间转换成12小时制</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/07/BOM笔记/" data-id="cjfp466h60001v4x09qh799xh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BOM学习/">BOM学习</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/08/远程仓库/" class="article-date">
+  <time datetime="2015-10-08T06:49:51.000Z" itemprop="datePublished">2015-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/笔记/">-笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/08/远程仓库/">远程仓库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>git 是一个分布式的 版本控制工具，特点，就是版本库存放在本地！！！</p>
+<h2 id="远程仓库的作用"><a href="#远程仓库的作用" class="headerlink" title="远程仓库的作用"></a>远程仓库的作用</h2><p>就是共享版本库！！！ 共享代码！！！</p>
+<h2 id="远程仓库的创建"><a href="#远程仓库的创建" class="headerlink" title="远程仓库的创建"></a>远程仓库的创建</h2><p><strong><em>远程仓库其实就是一个裸仓库</em></strong></p>
+<h2 id="裸仓库"><a href="#裸仓库" class="headerlink" title="裸仓库"></a>裸仓库</h2><p>创建裸仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init --bare</div></pre></td></tr></table></figure></p>
+<p>裸仓库创建完成之后，就不需要做任何操作了，在裸仓库中不能进行任何的开发操作</p>
+<h2 id="远程仓库的操作命令"><a href="#远程仓库的操作命令" class="headerlink" title="远程仓库的操作命令"></a>远程仓库的操作命令</h2><ol>
+<li><p>给远程仓库推送内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git push 远程仓库地址 本地分支名称:远程分支名称</div><div class="line"></div><div class="line">如果本地分支名称和远程分支名称相同，那么可以缩写如下：</div><div class="line">git push xxx.xxx.git master:master</div><div class="line">git push xxx.xxx.git master</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取远程仓库中所有的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone 远程仓库地址 文件夹名称</div><div class="line"></div><div class="line">文件夹名称也可以不用写，默认使用的就是远程仓库的文件夹名称！！</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取远程仓库中更新了的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull 远程仓库地址 分支名称</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>只有在远程仓库中从未推送过任何内容的时候，我们才能随意向里面推送任何内容</p>
+<p>但是，一旦已经推送过一次内容了，那么之后就不能随便的向远程仓库推送内容了，能推送的，只能是和第一次推送相关的修改的内容！！</p>
+<p><strong>每次在向远程仓库中推送新内容的时候，必须先进行一次获取更新内容的操作（pull），否则可能推送失败！！！</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/08/远程仓库/" data-id="cjfp466hr0006v4x03tbz5i2a" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">-学习</a></li></ul>
+
     </footer>
   </div>
   
@@ -288,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/08/分支学习/" data-id="cj8ie3rte000100x0g4sdinj1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/08/分支学习/" data-id="cjfp466hc0002v4x0tn9h7j7r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">-学习</a></li></ul>
@@ -307,9 +435,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorier</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">-笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/笔记/">-笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/bash学习/">bash学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
     </div>
   </div>
 
@@ -319,7 +447,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">-学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM学习/">BOM学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript/">javaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a></li></ul>
     </div>
   </div>
 
@@ -329,16 +457,16 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/学习/" style="font-size: 10px;">-学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+      <a href="/tags/学习/" style="font-size: 20px;">-学习</a> <a href="/tags/BOM学习/" style="font-size: 10px;">BOM学习</a> <a href="/tags/javaScript/" style="font-size: 10px;">javaScript</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
     </div>
   </div>
 
@@ -346,13 +474,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2017/10/08/远程仓库/">远程仓库</a>
-          </li>
         
           <li>
             <a href="/2017/10/08/面向对象/">bash</a>
@@ -360,6 +484,14 @@
         
           <li>
             <a href="/2017/10/08/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/07/BOM笔记/">BOM笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/08/远程仓库/">远程仓库</a>
           </li>
         
           <li>
@@ -378,7 +510,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
